@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alamon GO - Protein Premium untuk Performa Maksimal Susu Penambah Berat Badan. 100% Natural Terbuat dari bahan alami pilihan tanpa pengawet buatan yang berbahaya.">
+  <title>Alamon GO - Protein Premium untuk Performa Maksimal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#000000',
+            secondary: '#4a4a4a',
+            lightGray: '#9a9a9a',
+            white: '#ffffff',
+            accent: '#c0c0c0'
+          },
+          fontFamily: {
+            heading: ['Lato', 'sans-serif'],
+            body: ['Source Sans Pro', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom CSS untuk integrasi OrderOnline */
+    .ooef {
+      max-width: 100%;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e7f1 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .orderonline-embed-form input,
+    .orderonline-embed-form select,
+    .orderonline-embed-form textarea {
+      font-family: 'Source Sans Pro', sans-serif;
+      border-radius: 8px;
+      padding: 12px 16px;
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
+    }
+
+    .orderonline-embed-form input:focus,
+    .orderonline-embed-form select:focus,
+    .orderonline-embed-form textarea:focus {
+      outline: none;
+      border-color: #c0c0c0;
+      box-shadow: 0 0 0 3px rgba(192, 192, 192, 0.2);
+    }
+
+    .orderonline-embed-form button {
+      background: linear-gradient(to right, #4a4a4a, #000000);
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 14px 24px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .orderonline-embed-form button:hover {
+      background: linear-gradient(to right, #000000, #4a4a4a);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+      z-index: 1;
+    }
+
+    .gallery-item {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .sticky-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      display: none;
+    }
+
+    .sticky-cta.show {
+      display: block;
+      animation: fadeInUp 0.5s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero-content {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+      
+      .ooef {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="font-body text-secondary bg-white">
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <video autoplay muted loop class="hero-video">
+      <source src="https://cdn.unwatermark.ai/datarm/unwatermark-removebg-video/2025-09-15/output/9166bef4-d036-4c3e-a9c5-1b4da39026db.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="container mx-auto px-4 relative z-10 text-center hero-content">
+      <h1 class="text-4xl md:text-6xl font-heading font-black text-white mb-6" data-aos="fade-up">
+        Alamon GO
+      </h1>
+      <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Protein Premium untuk Performa Maksimal Susu Penambah Berat Badan
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex items-center justify-center gap-2 text-white">
+          <i data-feather="shield" class="text-accent"></i>
+          <span>Garansi Uang Kembali</span>
+        </div>
+        <div class="flex items-center justify-center gap-2 text-white">
+          <i data-feather="check-circle" class="text-accent"></i>
+          <span>100% Natural & Aman</span>
+        </div>
+      </div>
+      <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'});" class="bg-accent hover:bg-white text-primary font-heading font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+        Pesan Sekarang - Hemat 50%
+      </button>
+      <div class="mt-6 text-white">
+        <span class="line-through text-lg">Rp 358.000</span>
+        <span class="text-2xl font-bold ml-2">Rp 179.000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-16" data-aos="fade-up">
+         Alamon GO
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://cdn.orderonline.id/uploads/images_9536911757931823150.png" alt="Alamon GO Produk" class="w-full object-contain p-4">
+        </div>
+        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://cdn.orderonline.id/uploads/images_9787391757931823942.png" alt="Alamon GO Produk" class="w-full object-contain p-4">
+        </div>
+        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://cdn.orderonline.id/uploads/images_6699391757931823829.png" alt="Alamon GO Produk" class="w-full object-contain p-4">
+        </div>
+        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="250">
+          <img src="https://cdn.orderonline.id/uploads/images_7260031757931823769.png" alt="Alamon GO Produk" class="w-full object-contain p-4">
+        </div>
+        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://cdn.orderonline.id/uploads/images_9160091757931823651.png" alt="Alamon GO Produk" class="w-full object-contain p-4">
+        </div>
+        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="350">
+          <img src="https://cdn.orderonline.id/uploads/images_4592061757931821040.png" alt="Alamon GO Produk" class="w-full object-contain p-4">
+        </div>
+        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://cdn.orderonline.id/uploads/images_8055931757931832141.png" alt="Alamon GO Produk" class="w-full object-contain p-4">
+        </div>
+        <div class="gallery-item bg-white rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="450">
+          <img src="https://cdn.orderonline.id/uploads/images_5048731757931824325.png" alt="Alamon GO Produk" class="w-full object-contain p-4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits & Features -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-center mb-12 text-primary" data-aos="fade-up">
+        Mengapa Memilih Alamon GO?
+      </h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+            <i data-feather="leaf" class="text-accent w-10 h-10 mx-auto mb-4"></i>
+            <h3 class="text-lg font-heading font-bold mb-2 text-primary">100% Natural</h3>
+            <p class="text-lightGray text-sm">
+              Terbuat dari bahan alami pilihan tanpa pengawet buatan yang berbahaya
+            </p>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+            <i data-feather="activity" class="text-accent w-10 h-10 mx-auto mb-4"></i>
+            <h3 class="text-lg font-heading font-bold mb-2 text-primary">Performa Maksimal</h3>
+            <p class="text-lightGray text-sm">
+              Dirancang untuk memberikan nutrisi optimal bagi tubuh Anda
+            </p>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-6 text-center hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+            <i data-feather="users" class="text-accent w-10 h-10 mx-auto mb-4"></i>
+            <h3 class="text-lg font-heading font-bold mb-2 text-primary">Untuk Semua Usia</h3>
+            <p class="text-lightGray text-sm">
+              Cocok untuk pria dan wanita usia 20-50 tahun
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Promo -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="md:flex">
+          <div class="md:w-1/2 p-8 md:p-12">
+            <h2 class="text-3xl font-heading font-bold mb-4">Penawaran Spesial Hari Ini!</h2>
+            <div class="mb-6">
+              <span class="text-2xl text-lightGray line-through">Rp 358.000</span>
+              <span class="text-4xl font-bold text-primary ml-2">Rp 179.000</span>
+              <p class="text-accent font-bold mt-2">Hemat 50%!</p>
+            </div>
+            <ul class="mb-8 space-y-2">
+              <li class="flex items-center text-sm">
+                <i data-feather="check-circle" class="text-green-500 mr-2 w-4 h-4"></i>
+                <span>Pengiriman Cepat & Aman</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-feather="check-circle" class="text-green-500 mr-2 w-4 h-4"></i>
+                <span>Garansi Uang Kembali</span>
+              </li>
+              <li class="flex items-center text-sm">
+                <i data-feather="check-circle" class="text-green-500 mr-2 w-4 h-4"></i>
+                <span>Dukungan Pelanggan 24/7</span>
+              </li>
+            </ul>
+            <div class="flex items-center mb-6">
+              <i data-feather="clock" class="text-red-500 mr-2"></i>
+              <span class="font-bold text-red-500">Penawaran Berakhir Dalam:</span>
+            </div>
+            <div class="flex space-x-2 mb-8">
+              <div class="bg-gray-100 rounded-lg py-2 px-3 text-center">
+                <div class="text-xl font-bold">02</div>
+                <div class="text-xs text-gray-500">Jam</div>
+              </div>
+              <div class="bg-gray-100 rounded-lg py-2 px-3 text-center">
+                <div class="text-xl font-bold">45</div>
+                <div class="text-xs text-gray-500">Menit</div>
+              </div>
+              <div class="bg-gray-100 rounded-lg py-2 px-3 text-center">
+                <div class="text-xl font-bold">30</div>
+                <div class="text-xs text-gray-500">Detik</div>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 bg-accent flex items-center justify-center p-8">
+            <img src="https://cdn.orderonline.id/uploads/images_9536911757931823150.png" alt="Alamon GO" class="max-w-full h-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form -->
+  <section id="order-form" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-heading font-bold text-center mb-4 text-primary" data-aos="fade-up">
+        Pesan Sekarang
+      </h2>
+      <p class="text-center text-lightGray mb-10 text-sm" data-aos="fade-up" data-aos-delay="100">
+        Isi form di bawah ini untuk memesan Alamon GO
+      </p>
+      <div class="max-w-2xl mx-auto">
+        <div class="ooef">
+          <!-- OrderOnline Embed Code - v8.0.4 -->
+          <div class="ooef">
+            <form class="orderonline-embed-form" data-username="mila" data-product-slug="alamon-go" data-product-id="68c7e230a67b5af70e0965b7" id="oo-embed-form-alamon-go-1133" data-origin="orderonline">
+              <div class="ooef-loader">
+                <style>
+                  .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                  @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                  @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                  .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                  .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                  .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                  @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                  @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                </style>
+                <div aria-live="polite" role="status">
+                  <div>Loading...</div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <script>
+            if (typeof xLogError != 'function') {
+              var xLogError = function (error) {
+                var req = new XMLHttpRequest();
+                var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                req.open('POST', 'https://api.orderonline.id/log', true);
+                req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                req.send(params);
+              };
+            }
+            try {
+              if (typeof xEmbedScript != 'function') {
+                var xEmbedScript = function () {
+                  !function(w, d, e, v, id, t, s) {
+                    if (d.getElementById(id)) return;
+                    t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                    s = d.getElementsByTagName(e)[0];
+                    s.parentNode.insertBefore(t, s);
+                  }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                };
+              }
+              if (typeof xEmbedInit != 'function') {
+                var xEmbedInit = function (w, n) {
+                  if (w.ooe) return;
+                  n = w.ooe = function() {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                  };
+                  if (!w._ooe) w._ooe = n;
+                  n.push = n;n.loaded = !0;n.version = '8.0.4';
+                  n.queue = [];
+                };
+              }
+              xEmbedInit(window);
+              ooe('setup', 'redirect', 'https://mila.orderonline.id');
+              ooe('init', '5f1a7b8fa9bf807da24d83bb', '68c7e230a67b5af70e0965b7', '68c7e230a67b5af70e0965b8', 'oo-embed-form-alamon-go-1133', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
+              if (!window.jQuery) {
+                !function(w, d, e, v, id, t, s) {
+                  if (d.getElementById(id)) return;
+                  t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                  t.addEventListener('load', xEmbedScript);
+                  s = d.getElementsByTagName(e)[0];
+                  s.parentNode.insertBefore(t, s);
+                }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+              } else {
+                xEmbedScript();
+              }
+            } catch (e) {
+              xLogError(e);
+              throw e;
+            }
+          </script>
+          <!-- End OrderOnline Embed Code -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white pt-12 pb-6">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div>
+          <h3 class="text-lg font-heading font-bold mb-3">Alamon GO</h3>
+          <p class="text-lightGray text-sm">
+            Protein Premium untuk Performa Maksimal Susu Penambah Berat Badan
+          </p>
+        </div>
+        <div>
+          <h4 class="text-base font-heading font-bold mb-3">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-lightGray hover:text-white transition text-sm">Beranda</a></li>
+            <li><a href="#" class="text-lightGray hover:text-white transition text-sm">Tentang Kami</a></li>
+            <li><a href="#" class="text-lightGray hover:text-white transition text-sm">Produk</a></li>
+            <li><a href="#" class="text-lightGray hover:text-white transition text-sm">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-base font-heading font-bold mb-3">Kontak Kami</h4>
+          <ul class="space-y-2 text-lightGray text-sm">
+            <li class="flex items-start">
+              <i data-feather="map-pin" class="mr-2 mt-1 w-4 h-4"></i>
+              <span>Jakarta, Indonesia</span>
+            </li>
+           
+            <li class="flex items-center">
+              <i data-feather="mail" class="mr-2 w-4 h-4"></i>
+              <span>info@alamongo.com</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-base font-heading font-bold mb-3">Ikuti Kami</h4>
+          <div class="flex space-x-3">
+            <a href="#" class="text-lightGray hover:text-white transition">
+              <i data-feather="facebook" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-lightGray hover:text-white transition">
+              <i data-feather="instagram" class="w-5 h-5"></i>
+            </a>
+            <a href="#" class="text-lightGray hover:text-white transition">
+              <i data-feather="twitter" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-lightGray text-sm">
+        <p>&copy; 2025 Alamon GO. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA Button -->
+  <div class="sticky-cta" id="sticky-cta">
+    <button onclick="document.getElementById('order-form').scrollIntoView({behavior: 'smooth'});" class="bg-accent hover:bg-white text-primary font-heading font-bold py-3 px-5 rounded-full shadow-lg transition duration-300 flex items-center text-sm">
+      <i data-feather="shopping-cart" class="mr-2 w-4 h-4"></i>
+      Pesan Sekarang
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Initialize Feather Icons
+    feather.replace();
+
+    // Sticky CTA Button
+    window.addEventListener('scroll', function() {
+      const stickyCta = document.getElementById('sticky-cta');
+      if (window.scrollY > 500) {
+        stickyCta.classList.add('show');
+      } else {
+        stickyCta.classList.remove('show');
+      }
+    });
+
+    // Countdown Timer
+    function updateCountdown() {
+      const hoursElement = document.querySelector('.bg-gray-100:nth-child(1) .text-xl');
+      const minutesElement = document.querySelector('.bg-gray-100:nth-child(2) .text-xl');
+      const secondsElement = document.querySelector('.bg-gray-100:nth-child(3) .text-xl');
+      
+      let hours = parseInt(hoursElement.textContent);
+      let minutes = parseInt(minutesElement.textContent);
+      let seconds = parseInt(secondsElement.textContent);
+      
+      seconds--;
+      if (seconds < 0) {
+        seconds = 59;
+        minutes--;
+        if (minutes < 0) {
+          minutes = 59;
+          hours--;
+          if (hours < 0) {
+            hours = 23;
+          }
+        }
+      }
+      
+      hoursElement.textContent = hours.toString().padStart(2, '0');
+      minutesElement.textContent = minutes.toString().padStart(2, '0');
+      secondsElement.textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
